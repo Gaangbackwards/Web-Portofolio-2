@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio Angga Sandi Nugraha - Web Developer, Python & AI Enthusiast">
+  <title>Angga Portfolio | Web & AI Developer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code&family=DM+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= LOADER ================= -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">ANGGA</div>
+      <div class="loader-bar"><span></span></div>
+      <div class="loader-text">Initializing system...</div>
+    </div>
+  </div>
+
+  <!-- ================= CUSTOM CURSOR ================= -->
+  <div id="cursorDot" class="cursor-dot"></div>
+  <div id="cursorOutline" class="cursor-outline"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">ANGGA<span class="logo-dot">.</span></a>
+      <nav id="navLinks" class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#hero" data-section="hero">Home</a>
+        <a href="#about" data-section="about">About</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#certifications" data-section="certifications">Credentials</a>
+        <a href="#contact" data-section="contact">Contact</a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" aria-labelledby="hero-title">
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Available for work
+      </div>
+
+      <h1 id="hero-title" class="hero-name">
+        <span class="name-line">ANGGA</span>
+        <span class="name-line highlight">SANDI</span>
+        <span class="name-line highlight">NUGRAHA</span>
+      </h1>
+
+      <div class="hero-tagline" aria-live="polite">
+        <span class="static-text">Building </span>
+        <span id="typedText" class="typed-text"></span>
+        <span class="cursor-blink" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-bio">
+        Saya adalah seorang Fresh graduate yang aktif belajar dan berfokus pada pengembangan web, Python, dan Artificial Intelligence. 
+        Memiliki ketertarikan kuat pada logika, algoritma, dan pembuatan sistem interaktif yang bermanfaat.
+        Saat ini aktif mengembangkan berbagai proyek prototype seperti chatbot berbasis AI, web interaktif, dan sistem otomatisasi.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="12">0</span>
+          <span class="stat-label">Skills</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="8">0</span>
+          <span class="stat-label">Certificates</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="avatar-ring">
+        <div class="avatar-glow" aria-hidden="true"></div>
+        <div class="avatar-img">
+          <img src="foto for cv 2026-04-08 at 17.15.35.png" alt="Foto profil Angga Sandi Nugraha" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT (STRUKTUR PREMIUM + KONTEN LENGKAP) ================= -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">About</span>
+        <h2 id="about-title" class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>Saya adalah seorang pelajar yang memiliki minat besar di bidang teknologi, khususnya dalam pemrograman, pengembangan web, dan Artificial Intelligence. Ketertarikan saya berawal dari rasa penasaran terhadap bagaimana sebuah sistem bekerja, dan berkembang menjadi keinginan untuk membangun sistem tersebut secara mandiri.</p>
+          <p>Saya lebih menyukai pendekatan berbasis logika dan analisis, seperti algoritma dan pemecahan masalah, dibandingkan dengan hal-hal yang bersifat visual. Hal ini membuat saya nyaman dalam mengembangkan solusi berbasis kode yang efisien dan terstruktur.</p>
+          <p>Saat ini, saya aktif mengembangkan berbagai proyek seperti chatbot AI (Angga AI), website portofolio interaktif, serta sistem otomatisasi berbasis Python. Saya memiliki ketertarikan untuk menggabungkan teknologi, analisis data, dan kreativitas ke dalam satu proyek utuh.</p>
+          <p>Secara profesional, saya telah menyelesaikan pelatihan Web Development (Node.js & React) di BBPVP Bandung dan menjalani magang di PT Menara Fatih Indonesia. Pengalaman ini memperkuat kemampuan saya dalam pengembangan web, administrasi digital, serta kerja terstruktur di lingkungan profesional.</p>
+          <p><strong>Fokus saya: Mengubah ide menjadi sistem nyata yang berdampak.</strong></p>
+        </div>
+
+        <!-- ========== SKILLS SECTION (DIPERTAHANKAN + DITAMBAH TOOLS BARU) ========== -->
+        <div class="skills-wrapper reveal">
+          
+          <!-- Development Skills -->
+          <div class="skills-category">
+            <h4 class="skills-category-title">💻 Development</h4>
+            <div class="skills-grid">
+              <div class="skill-card" tabindex="0">
+                <h4>HTML/CSS</h4>
+                <div class="skill-bar"><span style="width:90%"></span></div>
+                <p class="skill-desc">Membangun struktur dan styling web yang responsif & modern</p>
+              </div>
+              <div class="skill-card" tabindex="0">
+                <h4>JavaScript</h4>
+                <div class="skill-bar"><span style="width:80%"></span></div>
+                <p class="skill-desc">Interaktivitas web, DOM manipulation, dan logic frontend</p>
+              </div>
+              <div class="skill-card" tabindex="0">
+                <h4>Python</h4>
+                <div class="skill-bar"><span style="width:70%"></span></div>
+                <p class="skill-desc">Scripting, automation, dan dasar pengembangan AI/ML</p>
+              </div>
+              <div class="skill-card" tabindex="0">
+                <h4>Node.js & React</h4>
+                <div class="skill-bar"><span style="width:75%"></span></div>
+                <p class="skill-desc">Backend development dan frontend framework modern</p>
+              </div>
+              <div class="skill-card" tabindex="0">
+                <h4>AI Basics</h4>
+                <div class="skill-bar"><span style="width:65%"></span></div>
+                <p class="skill-desc">Pemahaman konsep ML, prompt engineering, API integration</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office & Admin Skills -->
+          <div class="skills-category">
+            <h4 class="skills-category-title">📊 Office & Administration</h4>
+            <div class="skills-grid">
+              <div class="skill-card" tabindex="0">
+                <h4>MS Office Suite</h4>
+                <div class="skill-bar"><span style="width:90%"></span></div>
+                <p class="skill-desc">Word, Excel (Formula, Pivot), PowerPoint untuk dokumentasi profesional</p>
+              </div>
+              <div class="skill-card" tabindex="0">
+                <h4>Digital Admin</h4>
+                <div class="skill-bar"><span style="width:85%"></span></div>
+                <p class="skill-desc">Pengelolaan dokumen, data entry, dan administrasi digital terstruktur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Environment (DITAMBAHKAN: Render, Workbench, Vercel) -->
+          <div class="skills-category">
+            <h4 class="skills-category-title">🛠️ Tools & Environment</h4>
+            <div class="skills-grid tools-grid">
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">⚡</span>
+                <div class="tool-info">
+                  <h4>VS Code</h4>
+                  <p>Primary code editor dengan extensions produktif</p>
+                </div>
+              </div>
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">🗂️</span>
+                <div class="tool-info">
+                  <h4>Git & GitHub</h4>
+                  <p>Version control & kolaborasi proyek</p>
+                </div>
+              </div>
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">🗄️</span>
+                <div class="tool-info">
+                  <h4>MySQL Workbench</h4>
+                  <p>Database management, query design, dan visualisasi schema</p>
+                </div>
+              </div>
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">▲</span>
+                <div class="tool-info">
+                  <h4>Vercel</h4>
+                  <p>Deployment dan hosting untuk aplikasi frontend & Next.js</p>
+                </div>
+              </div>
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">🔴</span>
+                <div class="tool-info">
+                  <h4>Render</h4>
+                  <p>Cloud hosting untuk backend, database, dan web services</p>
+                </div>
+              </div>
+              <div class="tool-card" tabindex="0">
+                <span class="tool-icon">🤖</span>
+                <div class="tool-info">
+                  <h4>AI Tools</h4>
+                  <p>ChatGPT, Claude, Copilot untuk efisiensi development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE (DIPERTAHANKAN) ================= -->
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Experience</span>
+        <h2 id="experience-title" class="section-title">Work & Education</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 - 2026</span>
+            <h3 class="timeline-title">Internship / Peserta Magang</h3>
+            <h4 class="timeline-company">PT MENARA FATIH INDONESIA</h4>
+            <ul class="timeline-desc">
+              <li>Pengelolaan dokumen, data, dan administrasi digital perusahaan.</li>
+              <li>Mendukung kegiatan operasional yang berkaitan dengan teknologi dan komputer.</li>
+              <li>Membuat Website Company profile</li>
+              <li>merancang schema database</li>
+              <li>Berpartisipasi aktif dalam kegiatan internal perusahaan, termasuk sebagai Master of Ceremony (MC).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - 2026</span>
+            <h3 class="timeline-title">Program Sains</h3>
+            <h4 class="timeline-company">SMA PGRI 31 PANGALENGAN</h4>
+            <ul class="timeline-desc">
+              <li>Lulus tahun 2026 dengan kompetensi dasar yang kuat dalam logika, analisis, dan teknologi.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS (STRUKTUR PREMIUM + SEMUA KARYA ANDA) ================= -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Projects</span>
+        <h2 id="projects-title" class="section-title">My Work</h2>
+      </div>
+
+      <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+        <button class="filter-btn" data-filter="game" role="tab" aria-selected="false">Game</button>
+      </div>
+
+      <div class="projects-grid" aria-live="polite">
+
+        <!-- 1. Angga AI -->
+        <article class="project-card reveal" data-category="ai">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status in-progress">⚡ In Development</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">🤖</div>
+            <div class="project-links">
+              <span class="link-disabled" title="Coming Soon" aria-label="Project dalam pengembangan">🔒 Dev</span>
+            </div>
+          </div>
+          <h3 class="project-title">Angga AI</h3>
+          <p class="project-desc">Chatbot AI interaktif berbasis web dengan kemampuan respons cerdas, konteks percakapan, dan antarmuka modern yang user-friendly.</p>
+          <div class="tech-tags">
+            <span>Python</span><span>AI/LLM</span><span>Web</span><span>NLP</span>
+          </div>
+        </article>
+
+        <!-- 2. Web Edutech -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status live">🌐 Live Prototype</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">🎓</div>
+            <div class="project-links">
+              <a href="https://gaangbackwards.github.io/GaForcaedutech/" target="_blank" rel="noopener" class="btn-demo" aria-label="Lihat Web Edutech live">🔗 View Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Web Edutech</h3>
+          <p class="project-desc">Platform pembelajaran interaktif dengan fitur kursus modular, kuis adaptif, dashboard progres pengguna, dan sistem manajemen konten.</p>
+          <div class="tech-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>UI/UX</span><span>Responsive</span>
+          </div>
+        </article>
+
+        <!-- 3. Game Flyga -->
+        <article class="project-card reveal" data-category="game">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status live">🎮 Playable</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">🕹️</div>
+            <div class="project-links">
+              <a href="https://gaangbackwards.github.io/Game-project/" target="_blank" rel="noopener" class="btn-demo" aria-label="Mainkan Game Flyga">🔗 Play Game</a>
+            </div>
+          </div>
+          <h3 class="project-title">Game Flyga</h3>
+          <p class="project-desc">Game arcade berbasis web dengan mekanik flight physics, sistem skor real-time, leaderboard lokal, dan kontrol touch/keyboard yang responsif.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span><span>Canvas API</span><span>Game Dev</span><span>Physics</span>
+          </div>
+        </article>
+
+        <!-- 4. Berjelajah Rafting -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status live">🌐 Live</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">🌊</div>
+            <div class="project-links">
+              <a href="https://berjelajahraftingpangalengan.com" target="_blank" rel="noopener" class="btn-demo" aria-label="Lihat Berjelajah Rafting">🔗 View Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Berjelajah Rafting Pangalengan</h3>
+          <p class="project-desc">Website informasi dan layanan wisata yang menyediakan detail paket, galeri, dan kontak untuk kemudahan pengunjung.</p>
+          <div class="tech-tags">
+            <span>Web Dev</span><span>Responsive</span><span>UI Design</span>
+          </div>
+        </article>
+
+        <!-- 5. Project OJT Kreatifest -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status live">🌐 Live</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">💼</div>
+            <div class="project-links">
+              <a href="https://kreatifest-zesn.vercel.app/" target="_blank" rel="noopener" class="btn-demo" aria-label="Lihat Project Kreatifest">🔗 View Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Project OJT Kreatifest</h3>
+          <p class="project-desc">Website untuk menampilkan hasil pekerjaan dan dokumentasi selama masa OJT/magang di PT Menara Fatih Indonesia.</p>
+          <div class="tech-tags">
+            <span>Web Dev</span><span>Portfolio</span><span>Vercel</span>
+          </div>
+        </article>
+
+        <!-- 6. Project OJT Muda Movement -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-glow" aria-hidden="true"></div>
+          <span class="project-status live">🌐 Live</span>
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">🚀</div>
+            <div class="project-links">
+              <a href="https://muda-movementv1.vercel.app/" target="_blank" rel="noopener" class="btn-demo" aria-label="Lihat Project Muda Movement">🔗 View Live</a>
+            </div>
+          </div>
+          <h3 class="project-title">Project OJT Muda Movement</h3>
+          <p class="project-desc">Website untuk menampilkan hasil pekerjaan dan inisiatif selama masa OJT/magang.</p>
+          <div class="tech-tags">
+            <span>Web Dev</span><span>Portfolio</span><span>Vercel</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS (STRUKTUR PREMIUM + SEMUA SERTIFIKAT) ================= -->
+  <section id="certifications" aria-labelledby="certs-title">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Credentials</span>
+        <h2 id="certs-title" class="section-title">Sertifikat & Sertifikasi</h2>
+        <p class="section-sub">Sertifikat pelatihan yang saya peroleh selama belajar teknologi</p>
+      </div>
+
+      <h3 class="cert-subtitle reveal">📜 Sertifikat Pelatihan</h3>
+      <div class="certs-grid">
+
+        <!-- BARU DARI CV -->
+        <button class="cert-card reveal" data-img="foto/bbpvp.jpg" aria-label="Lihat sertifikat BBPVP Bandung">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">💻</div>
+          <div class="cert-body">
+            <span class="cert-issuer">BBPVP Bandung</span>
+            <div class="cert-name">Pengembangan Web (Node.js & React)</div>
+            <span class="cert-date">2026</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/ojt-menara.jpg" aria-label="Lihat sertifikat OJT PT Menara Fatih Indonesia">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🏢</div>
+          <div class="cert-body">
+            <span class="cert-issuer">PT Menara Fatih Indonesia</span>
+            <div class="cert-name">Sertifikat Penyelesaian Magang / OJT</div>
+            <span class="cert-date">2026</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <!-- SERTIFIKAT ASLI ANDA -->
+        <button class="cert-card reveal" data-img="foto/1.png" aria-label="Lihat sertifikat AI & Python Fundamentals">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🏆</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Yayasan Gaeni Moentari Nusantara</span>
+            <div class="cert-name">AI & Python Fundamentals</div>
+            <span class="cert-date">2024</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/SEFC.jpg" aria-label="Lihat sertifikat Software Engineering Fundamentals">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">📜</div>
+          <div class="cert-body">
+            <span class="cert-issuer">RevoU</span>
+            <div class="cert-name">Software Engineering Fundamentals</div>
+            <span class="cert-date">2025</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/DAMC.jpg" aria-label="Lihat sertifikat Data Analytics Fundamentals">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🎓</div>
+          <div class="cert-body">
+            <span class="cert-issuer">RevoU</span>
+            <div class="cert-name">Data Analytics Fundamentals</div>
+            <span class="cert-date">2025</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/Wordpress Introduction.jpg" aria-label="Lihat sertifikat WordPress Introduction">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🌐</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Myskill</span>
+            <div class="cert-name">WordPress Introduction</div>
+            <span class="cert-date">2025</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/Exclusive - Trial Bootcamp Data Science - 13 s_d 17 Oktober 2025 - ANGGA SANDI NUGRAHA.png" aria-label="Lihat sertifikat Data Science Fundamentals">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🤖</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Intelligo.id</span>
+            <div class="cert-name">Data Science Fundamentals</div>
+            <span class="cert-date">2025</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+        <button class="cert-card reveal" data-img="foto/AI Productivity and AI API Integration for Developers.jpg" aria-label="Lihat sertifikat AI Productivity and API Integration">
+          <div class="cert-shine" aria-hidden="true"></div>
+          <div class="cert-badge" aria-hidden="true">🚀</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Hactiv8</span>
+            <div class="cert-name">AI Productivity & API Integration</div>
+            <span class="cert-date">2026</span>
+          </div>
+          <span class="cert-hover-text">Click to view</span>
+        </button>
+
+      </div>
+
+      <!-- SERTIFIKASI BNSP (DALAM PROSES) -->
+      <h3 class="cert-subtitle reveal" style="margin-top: 60px;">🏅 Sertifikasi Kompetensi</h3>
+      <div class="certs-grid">
+        <div class="cert-card cert-pending reveal" data-type="text" data-text="Sertifikat kompetensi BNSP saat ini sedang dalam proses pengajuan dan verifikasi. Skema sertifikasi dan dokumen resmi akan segera diperbarui di halaman ini setelah diterbitkan.">
+          <div class="cert-badge pending-badge">⏳</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</span>
+            <div class="cert-name">Sertifikasi Kompetensi Teknologi</div>
+            <span class="cert-date" style="color: var(--amber); font-weight: bold;">Status: Dalam Proses Pengajuan</span>
+          </div>
+          <span class="cert-hover-text">Click for info</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT (SEMUA LINK DIPERTAHANKAN) ================= -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Contact</span>
+        <h2 id="contact-title" class="section-title">Let's Connect</h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:anggasandinugraha0@gmail.com" class="contact-link" aria-label="Kirim email ke anggasandinugraha0@gmail.com">
+          <div class="contact-icon email" aria-hidden="true">📧</div>
+          <div class="contact-info">
+            <span class="contact-platform">Email</span>
+            <span class="contact-handle">anggasandinugraha0@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://wa.me/6281222634834" target="_blank" rel="noopener" class="contact-link" aria-label="Chat via WhatsApp">
+          <div class="contact-icon whatsapp" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-platform">WhatsApp</span>
+            <span class="contact-handle">+62 812-2263-4834</span>
+          </div>
+        </a>
+        <a href="https://github.com/Gaangbackwards" target="_blank" rel="noopener" class="contact-link" aria-label="Kunjungi GitHub Gaangbackwards">
+          <div class="contact-icon github" aria-hidden="true">💻</div>
+          <div class="contact-info">
+            <span class="contact-platform">GitHub</span>
+            <span class="contact-handle">github.com/Gaangbackwards</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/angga-sandi-nugraha-715126362" target="_blank" rel="noopener" class="contact-link" aria-label="Kunjungi LinkedIn Angga Sandi Nugraha">
+          <div class="contact-icon linkedin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-platform">LinkedIn</span>
+            <span class="contact-handle">linkedin.com/in/angga-sandi-nugraha</span>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/angga_s.n100223zzzz" target="_blank" rel="noopener" class="contact-link" aria-label="Kunjungi Instagram @angga_s.n100223zzzz">
+          <div class="contact-icon instagram" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-platform">Instagram</span>
+            <span class="contact-handle">@angga_s.n100223zzzz</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-name">ANGGA SANDI NUGRAHA</div>
+      <div class="footer-copy">© <span id="currentYear"></span> • Built with logic & code</div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/Gaangbackwards" target="_blank" rel="noopener" aria-label="GitHub">💻</a>
+      <a href="https://linkedin.com/in/angga-sandi-nugraha-715126362" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
+      <a href="https://instagram.com/angga_s.n100223zzzz" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+      <a href="https://wa.me/6281222634834" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL (Certifications) ================= -->
+  <div id="certModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-box">
+      <button id="modalClose" class="modal-close" aria-label="Tutup preview sertifikat">&times;</button>
+      <h3 id="modalTitle" class="visually-hidden">Preview Sertifikat</h3>
+      <img id="modalImg" src="" alt="Preview sertifikat" loading="lazy" style="display: none;">
+      <p id="modalText" style="display: none; color: var(--text-main); text-align: center; padding: 20px; font-family: 'Fira Code', monospace;"></p>
+    </div>
+  </div>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="script.js"></script>
+  <script>
+    // Script kecil untuk memastikan tahun di footer selalu update
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
