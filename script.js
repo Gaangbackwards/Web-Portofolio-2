@@ -130,6 +130,30 @@ const navbar = $('#navbar');
 const navLinks = $$('#navLinks a');
 const sections = $$('section[id]');
 
+/* Theme Toggle */
+const themeToggle = $('#themeToggle');
+if (themeToggle) {
+  const themeIcon = $('.theme-icon', themeToggle);
+  const themeLabel = $('.theme-label', themeToggle);
+
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    themeToggle.setAttribute('aria-label', `Beralih ke tema ${isLight ? 'gelap' : 'terang'}`);
+    if (themeIcon) themeIcon.textContent = isLight ? '☾' : '☼';
+    if (themeLabel) themeLabel.textContent = isLight ? 'Dark mode' : 'Light mode';
+  }
+
+  applyTheme(document.documentElement.dataset.theme);
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('portfolio-theme', nextTheme);
+    applyTheme(nextTheme);
+  });
+}
+
 function updateNavbar() {
   if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 40);
   
